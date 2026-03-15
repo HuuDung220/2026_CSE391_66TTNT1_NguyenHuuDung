@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Đặt hàng</title>
+
+    <style>
+      body {
+        font-family: Arial;
+      }
+
+      form {
+        width: 400px;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        margin-top: 5px;
+        padding: 6px;
+      }
+
+      .error {
+        color: red;
+        font-size: 13px;
+      }
+
+      #charCount {
+        font-size: 12px;
+      }
+
+      #summary {
+        border: 1px solid gray;
+        padding: 10px;
+        margin-top: 10px;
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Form Đặt Hàng</h2>
+
+    <form id="orderForm">
+      <label>Tên sản phẩm</label>
+      <select id="product">
+        <option value="">-- Chọn sản phẩm --</option>
+        <option value="Áo">Áo</option>
+        <option value="Quần">Quần</option>
+        <option value="Giày">Giày</option>
+      </select>
+      <div class="error" id="productError"></div>
+
+      <label>Số lượng</label>
+      <input type="number" id="quantity" />
+      <div class="error" id="quantityError"></div>
+
+      <label>Ngày giao hàng</label>
+      <input type="date" id="deliveryDate" />
+      <div class="error" id="dateError"></div>
+
+      <label>Địa chỉ giao</label>
+      <input type="text" id="address" />
+      <div class="error" id="addressError"></div>
+
+      <label>Ghi chú</label>
+      <textarea id="note"></textarea>
+      <div id="charCount">0/200</div>
+      <div class="error" id="noteError"></div>
+
+      <label>Thanh toán</label><br />
+      <input type="radio" name="payment" value="COD" /> COD
+      <input type="radio" name="payment" value="Bank" /> Chuyển khoản
+      <input type="radio" name="payment" value="Wallet" /> Ví điện tử
+      <div class="error" id="paymentError"></div>
+
+      <br /><br />
+
+      <p>Tổng tiền: <span id="total">0</span> VND</p>
+
+      <button type="submit">Đặt hàng</button>
+    </form>
+
+    <div id="summary"></div>
+
+    <div id="success"></div>
+
+    <script src="form_advanced.js"></script>
+  </body>
+</html>

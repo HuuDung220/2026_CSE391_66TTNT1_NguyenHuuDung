@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bảng điểm sinh viên</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 600px;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+      }
+      .weak {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Bảng Điểm Sinh Viên</h2>
+
+    <input type="text" id="name" placeholder="Họ tên" />
+    <input type="number" id="score" placeholder="Điểm (0-10)" />
+    <button id="addBtn">Thêm</button>
+
+    <br /><br />
+
+    <table>
+      <thead>
+        <tr>
+          <th>STT</th>
+          <th>Họ tên</th>
+          <th>Điểm</th>
+          <th>Xếp loại</th>
+          <th>Thao tác</th>
+        </tr>
+      </thead>
+
+      <tbody id="tableBody"></tbody>
+    </table>
+
+    <p id="stats"></p>
+
+    <script src="score.js"></script>
+  </body>
+</html>
